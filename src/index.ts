@@ -1,4 +1,5 @@
 import express from 'express'
+import rateLimit from 'express-rate-limit'
 import * as fs from 'fs-extra'
 import * as path from 'path'
 
@@ -23,6 +24,12 @@ app.use((req, res, next) => {
   next()
 })
 
+const limiter = rateLimit({
+  windowMs: 1 * 60 * 1000,
+  max: 100,
+})
+
+app.use(limiter)
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
