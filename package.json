@@ -14,10 +14,8 @@
     "dist/"
   ],
   "scripts": {
-    "build": "rollup -c",
     "test": "jest",
-    "lint": "eslint",
-    "prepublish": "npm run build"
+    "lint": "eslint"
   },
   "devDependencies": {
     "@rollup/plugin-eslint": "^8.0.1",
@@ -56,6 +54,7 @@
   },
   "dependencies": {
     "@types/express": "^4.17.11",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "fs-extra": "^9.1.0"
   }
 }
