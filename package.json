@@ -53,5 +53,8 @@
     "moduleNameMapper": {
       "^@/(.+)": "<rootDir>/src/$1"
     }
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
